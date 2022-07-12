@@ -1,1 +1,0 @@
-# iottalk-v2-notes
