@@ -14,10 +14,13 @@ Config Files
 
 相關的設定檔
 
-- docker-compose
-- DockerFile
-  - ``iottalk-autogen/Dockerfile``
-  - 產生 access_log_file, error_log_file 在 docker container 裡面的 file 路徑
+- Docker
+
+  - docker-compose
+  - DockerFile
+  
+    - ``iottalk-autogen/Dockerfile``
+    - 產生 access_log_file, error_log_file 在 docker container 裡面的 file 路徑
 
 .. code:: sh
 
@@ -26,8 +29,23 @@ Config Files
 
 |
 
-- Django settings.py
-- gunicorn settings.py
+- Django
+
+  - Django settings
+  
+    - ``iottalk-autogen/_/settings.py``
+      
+      - 裡面使用 ``iottalk-autogen/_/env/env`` 參數
+  
+        .. code:: py
+
+          #iottalk-autogen/_/settings.py
+          load_dotenv(os.path.join(BASE_DIR, '_/env/env'))
+
+
+  - gunicorn config
+  
+    - ``iottalk-autogen/_/gunicorn/config.py``
 
 
 |
