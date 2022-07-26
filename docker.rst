@@ -46,37 +46,37 @@ Config Files
   - gunicorn config
   
     - ``iottalk-autogen/_/gunicorn/config.py``
- 
-.. code:: py
 
-  # iottalk-autogen/_/gunicorn/config.py
-  
-  'log_file': {
-      'class': 'logging.handlers.RotatingFileHandler',
-      
-      # original code
-      # there's sth wrong with the path in Docker Container
-      
-      # 'filename': os.path.join(settings.LOG_DIR, 'gunicorn_access.log'),
-      
-      # hotfix
-      'filename': os.path.join('/var/log/autogen', 'gunicorn_access.log'),
-      'maxBytes': 10 * 1024 * 1024,
-      'backupCount': 3,
-      'encoding': 'UTF-8',
-  },
-  'error_log_file': {
-      'class': 'logging.handlers.RotatingFileHandler',
-      
-      # original code
-      # 'filename': os.path.join(settings.LOG_DIR, 'gunicorn_error.log'),
-      
-      # hotfix
-      'filename': os.path.join('/var/log/autogen', 'gunicorn_error.log'),
-      'maxBytes': 10 * 1024 * 1024,
-      'backupCount': 3,
-      'encoding': 'UTF-8',
-  },
+      .. code:: py
+
+        # iottalk-autogen/_/gunicorn/config.py
+
+        'log_file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+
+            # original code
+            # there's sth wrong with the path in Docker Container
+
+            # 'filename': os.path.join(settings.LOG_DIR, 'gunicorn_access.log'),
+
+            # hotfix
+            'filename': os.path.join('/var/log/autogen', 'gunicorn_access.log'),
+            'maxBytes': 10 * 1024 * 1024,
+            'backupCount': 3,
+            'encoding': 'UTF-8',
+        },
+        'error_log_file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+
+            # original code
+            # 'filename': os.path.join(settings.LOG_DIR, 'gunicorn_error.log'),
+
+            # hotfix
+            'filename': os.path.join('/var/log/autogen', 'gunicorn_error.log'),
+            'maxBytes': 10 * 1024 * 1024,
+            'backupCount': 3,
+            'encoding': 'UTF-8',
+        },
 
 
 |
