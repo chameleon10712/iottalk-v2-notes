@@ -22,10 +22,10 @@ Config Files
     - ``iottalk-autogen/Dockerfile``
     - 產生 access_log_file, error_log_file 在 docker container 裡面的 file 路徑
 
-.. code:: sh
+      .. code:: sh
 
-  mkdir -p /var/log/autogen && \
-  mkdir -p /var/log/device
+        mkdir -p /var/log/autogen && \
+        mkdir -p /var/log/device
 
 |
 
