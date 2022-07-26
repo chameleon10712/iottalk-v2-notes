@@ -9,6 +9,19 @@ Docker
 
 |
 
+Config Files
+---------------
+
+相關的設定檔
+
+- docker-compose
+- DockerFile
+- Django settings.py
+- gunicorn settings.py
+
+
+|
+
 Account System
 ------------------
 
