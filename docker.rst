@@ -78,6 +78,11 @@ Config Files
             'encoding': 'UTF-8',
         },
 
+|
+
+相關 error msg
+
+- ``Error: Unable to configure handler 'error_log_file'``
 
 |
 
@@ -218,7 +223,4 @@ Open Ports (might help, not sure)
 |
 
 
-Error: Unable to configure handler 'error_log_file'
-------------------------------------------------------
 
-|
